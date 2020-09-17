@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dictionary</title>
+</head>
+<body>
+
+<input type="text" id="inputWord">
+<button type="button" onclick="trans()">translate</button>
+<p id="result"></p>
+<script>
+    var Eng = ["table","cup","wallet"];
+    var VN = ["bàn","cố","ví"];
+    function trans() {
+        debugger
+        var x = document.getElementById("inputWord").value;
+        let i
+        let j
+        for(i = 0; i< Eng.length; i++){
+            if (x == Eng[i]) {
+                document.getElementById("result").innerHTML = VN[Eng.indexOf(x)]
+            }
+        }
+        for(j = 0; j< VN.length; j++){
+            if (x == VN[j]) {
+                document.getElementById("result").innerHTML = Eng[VN.indexOf(x)]
+            }
+        }
+
+
+
+
+
+
+        // for (let i = 0; i < cont.length; i++) {
+        //     if (x == cont[i]) {
+        //         for (let j = 0; j < Eng.length; j++) {
+        //             if (x == Eng[i]) {
+        //                 document.getElementById("result").innerHTML = VN[Eng.indexOf[x]]
+        //             }
+        //         }
+        //         for (let k = 0; k<VN.length; k++){
+        //             if (x == VN[i]) {
+        //                 document.getElementById("result").innerHTML = Eng[VN.indexOf[x]]
+        //         }
+        //     }
+        // } if(x !== cont[i]){
+        //         document.getElementById("result").innerHTML = "there is such word in our dictionary"
+        //     }
+        // }
+    }
+
+
+
+</script>
+</body>
+</html>
